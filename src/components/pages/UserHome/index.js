@@ -2,9 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Product from './product';
+import ProductModal from './modal';
 
 const UserHome = ({ firstName, points, products }) => (
   <div className="page page--user-home">
+      <ProductModal />
       <p>
         Welcome { firstName }!
       </p>

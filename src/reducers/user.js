@@ -59,8 +59,13 @@ const user = (state = initialState, action) => {
         ...state,
         points: action.data
       }
-      default:
-        return state
+    case types.SELECT_PRODUCT:
+      return {
+        ...state,
+        selectedProduct: action.data
+      }
+    default:
+      return state
   }
 }
 

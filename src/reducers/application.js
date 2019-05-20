@@ -4,6 +4,7 @@ import * as types from 'actions/constants/'
 
 const initialState = {
   isAuthenticated: false,
+  isModalOpen: false
 };
 
 const application = (state = initialState, action) => {
@@ -13,8 +14,13 @@ const application = (state = initialState, action) => {
         ...state,
         isAuthenticated: action.data
       }
-      default:
-        return state
+    case types.TOGGLE_MODAL:
+      return {
+        ...state,
+        isModalOpen: action.data
+      }
+    default:
+      return state
   }
 }
 
