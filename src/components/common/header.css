@@ -1,0 +1,12 @@
+.header {
+  padding: 0.8rem 2.4rem;
+  background-color: #46e2a1;
+  color: #ffffff;
+  font-style: italic;
+  display: flex;
+}
+
+.sign-out-btn {
+  align-self: center;
+  margin-left: auto;
+}
