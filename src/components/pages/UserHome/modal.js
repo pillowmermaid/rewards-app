@@ -12,6 +12,9 @@ import './modal.css';
 class ProductModal extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      colorIndex: 0
+    }
     this.goToCheckout = this.goToCheckout.bind(this);
     this.changeItemColor = this.changeItemColor.bind(this);
   }
@@ -20,21 +23,43 @@ class ProductModal extends Component {
 
   }
 
-  changeItemColor() {
-
+  changeItemColor(index) {
+    this.setState({ colorIndex: index })
   }
 
   render() {
     const { isModalOpen, product, toggleModal } = this.props;
+    const { colorIndex } = this.state;
+    const price = product.types[colorIndex].price.toLocaleString();
     return(
       <Fragment>
         { (isModalOpen && product) &&
-          <div className="product-modal">
-            <button onClick={() => toggleModal(false)}>x</button>
-            <div className="product-image-container">
-              <img src={`images/${product.types[0].img}`} alt={product.name} />
+          <div className="modal">
+            <div className="modal-header">
+              <button className="btn btn-close" onClick={() => toggleModal(false)}>x</button>
             </div>
-            <h2>{product.name}</h2>
+            <div className="modal-content">
+              <div className="flex-col">
+                <img src={`images/${product.types[colorIndex].img}`} alt={product.name} />
+                <div className="product-colors">
+                  { product.types.map((type, i) => {
+                    const colorSelectStyle = {
+                      backgroundColor: type.color
+                    }
+                    return (
+                      <button key={`color-select--${i}`} style={colorSelectStyle} className="color-select" onClick={() => this.changeItemColor(i)}></button>
+                      )
+                    }
+                  )}
+                </div>
+              </div>
+              <div className="flex-col">
+                <h2>{product.name}</h2>
+                <h3>{product.types[colorIndex].subName}</h3>
+                <p><strong>{price}</strong><i> points</i></p>
+                <button className="btn" onClick={() => this.goToCheckout(colorIndex)}>Checkout</button>
+              </div>    
+            </div>
           </div>
         }
         </Fragment>

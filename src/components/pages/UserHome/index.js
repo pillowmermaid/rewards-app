@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import Product from './product';
 import ProductModal from './modal';
 
+import './index.css';
+
 const UserHome = ({ firstName, points, products }) => (
   <div className="page page--user-home">
       <ProductModal />

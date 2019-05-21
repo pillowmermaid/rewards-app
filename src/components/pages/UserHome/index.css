@@ -1,0 +1,18 @@
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 680px) {
+  .products-list {
+    flex-direction: column;
+  }
+  .product {
+    margin-top: 1.2rem;
+  }
+}
+@media (min-width: 680px) {
+  .product + .product {
+    margin-left: 1.2rem;
+  }
+}

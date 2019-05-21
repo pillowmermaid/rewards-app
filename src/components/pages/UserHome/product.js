@@ -33,7 +33,7 @@ class Product extends Component {
     return(
       <div className="product" onClick={this.setSelectedProduct}>
         <div className="product-image-container">
-          <img src={`images/${product.types[0].img}`} />
+          <img src={`images/${product.types[0].img}`} alt={product.name} />
         </div>
         <h2>{product.name}</h2>
         <p>Starting from {this.getMinCost()} points</p>

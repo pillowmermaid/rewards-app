@@ -1,9 +1,45 @@
-.product-modal {
+.modal {
   position: fixed;
   background: white;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 85%;
+  width: 90%;
+  max-width: 580px;
+  height: 90%;
   z-index: 100;
+  padding: 2.4rem;
+  overflow: auto;
+}
+.modal-header {
+  display: flex;
+  justify-content: flex-end; 
+}
+.modal-content {
+  display: flex;
+  margin-top: 2.4rem;
+}
+.modal-content img {
+  height: 300px;
+  width: 300px;
+  border: 1.25px solid #bcbcbc;
+}
+.product-colors {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.2rem;
+}
+.color-select {
+  border: 1px solid #bcbcbc;
+  transition: border 0.25s ease-in-out;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+}
+.color-select:hover {
+  border: 1.25px solid #ffffff;
+}
+
+.color-select + .color-select {
+  margin-left: 0.8rem;
 }

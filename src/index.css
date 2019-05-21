@@ -21,3 +21,32 @@ code {
     monospace;
 }
 
+h2,
+h3 {
+  margin: 0;
+}
+
+.btn {
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  background-color: #ffffff;
+  border: 1.25px solid #bcbcbc;
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  background-color: #46e2a1;
+  border: 1.25px solid #ffffff;
+  color: #ffffff;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-col + .flex-col {
+  margin-left: 1.2rem;
+}
+
