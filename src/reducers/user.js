@@ -8,7 +8,7 @@ const initialState = {
     password: 'password'
   },
   firstName: 'Tom',
-  points: 50000,
+  points: 500000,
   products: [
     {
       name: 'AirBuds',

@@ -9,12 +9,12 @@ import './index.css';
 const UserHome = ({ firstName, points, products }) => (
   <div className="page page--user-home">
       <ProductModal />
-      <p>
+      <h2>
         Welcome { firstName }!
-      </p>
-      <p>
-        You currently have { points } points
-      </p>
+      </h2>
+      <h3>
+        You currently have <strong>{ points }</strong> points
+      </h3>
       <div className="products-list">
         { products.map((prod, i) =>
           <Product key={`${prod.name}--item-${i}`} product={prod} />

@@ -13,7 +13,7 @@ const Header = ({
       <div className="header">
         <h1>SuperMiles</h1>
         { isAuthenticated &&
-          <button className="sign-out-btn" onClick={() => toggleLogin(false) }>
+          <button className="btn sign-out-btn" onClick={() => toggleLogin(false) }>
             <span>Sign out</span>
           </button>
         }

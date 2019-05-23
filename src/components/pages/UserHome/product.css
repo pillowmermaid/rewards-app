@@ -34,9 +34,6 @@
 .product:hover img {
    transform: scale(1.1);
 }
-.product h2 {
-  
-}
 .product p {
   margin: 0;
   font-size: 1.2rem;

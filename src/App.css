@@ -1,5 +1,6 @@
-.App {
+.app {
   text-align: center;
+  height: 100vh;
 }
 
 .App-logo {
@@ -24,7 +25,7 @@
 }
 
 .page {
-  min-height: 100vh;
+  min-height: calc(100vh - 99px);
   padding: 1.8rem 2.4rem;
 }
 
