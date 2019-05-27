@@ -1,6 +1,5 @@
 A quick prototype of a reward redemption page.
 
-The login credentials are "admin" and "password".
+`npm install` and then `npm start` to get the app running on [http://localhost:3000](http://localhost:3000).
 
-Login and redeem some stuff with `npm start`!
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The login credentials are "admin" and "password".
