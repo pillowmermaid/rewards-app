@@ -4,7 +4,9 @@ import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {
   toggleLogin as toggleLoginAction
-} from 'actions'
+} from 'actions';
+
+import './login.css';
 
 class Login extends Component {
   constructor(props) {
@@ -31,17 +33,15 @@ class Login extends Component {
       return <Redirect to="/" />
     }
     return (
-      <div className="Login">
-        <header className="App-header">
-          <label htmlFor="username">Username</label>
-          <input type="text" id="username" ref={this.usernameRef} />
-          <label htmlFor="password">Password</label>
-          <input type="password" id="password" ref={this.passwordRef} />
-          <button onClick={this.validateLogin}>Log In</button>
-          { this.state.error && 
-            <p>Sorry your credentials were incorrect.</p>
-          }
-        </header>
+      <div className="page page--login">
+        <label htmlFor="username">Username</label>
+        <input type="text" id="username" ref={this.usernameRef} />
+        <label htmlFor="password">Password</label>
+        <input type="password" id="password" ref={this.passwordRef} />
+        <button className="btn login-btn" onClick={this.validateLogin}>Log In</button>
+        { this.state.error && 
+          <p>Sorry your credentials were incorrect.</p>
+        }
       </div>
     );
   }

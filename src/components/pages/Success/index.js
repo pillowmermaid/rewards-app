@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
+import './index.css';
+
 const SuccessPage = ({ product, points }) => (
   <div className="page page--success">
       <h2>

@@ -1,0 +1,24 @@
+input + label {
+  margin-top: 1.2rem;
+}
+
+label + input {
+  margin-top: 0.4rem;
+}
+
+.login-btn {
+  width: 100%;
+  max-width: 171px;
+  margin-top: 1.8rem;
+}
+
+.page.page--login {
+  background-color: #282c34;
+  min-height: calc(100vh - 68.93px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.4rem;
+  color: white;
+}

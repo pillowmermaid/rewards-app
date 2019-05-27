@@ -43,9 +43,10 @@ const initialState = {
       name: 'OtherBud',
       types: [
         {
-          subName: 'Smokey White',
-          color: '#d4d4d4',
-          price: 5000
+          subName: 'Other Green',
+          color: '#49cc54',
+          img: 'airbuds/green.png',
+          price: 1234
         }
       ]
     }
