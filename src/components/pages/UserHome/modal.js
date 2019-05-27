@@ -10,6 +10,9 @@ import {
 
 import './modal.css';
 
+/* Ideally would refactor common modal logic into a HOC 
+to keep this component cleaner*/
+
 class ProductModal extends Component {
   constructor(props) {
     super(props);

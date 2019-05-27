@@ -2,6 +2,7 @@ import * as types from 'actions/constants/'
 
 // Reducer for the state relating to user actions
 
+// Initial state could be external or as local json as well
 const initialState = {
   login: {
     userName: 'admin',

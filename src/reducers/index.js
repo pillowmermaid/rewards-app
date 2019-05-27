@@ -8,6 +8,9 @@ import user from './user';
 this demo will use. Ideally this data would be fetched from 
 and external API in a production application */
 
+/* The configs are for redux-persist and tell the store which
+values not to perisit in local storage (they are lost on refresh)*/
+
 const applicationConfig = {
   key: 'application',
   storage,
